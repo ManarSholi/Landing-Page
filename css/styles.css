@@ -64,14 +64,51 @@ section {
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
+.navbar__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    height: 100%;
+    width: 100%;
+}
+
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
     text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 30%;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar__menu ul li:hover {
+    background-color: black;
+    color: white;
+}
+
+.navbar__menu ul li a {
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navbar__menu ul li a:hover {
+    background-color: black;
+    color: white;
 }
 
 .navbar__menu li {
-    display: inline-block;
+    color: black;
+    height: 100%;
+    text-align: center;
 }
 
 .navbar__menu .menu__link {
@@ -93,9 +130,38 @@ section {
     background: #fff;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     z-index: 5;
+    height: 5%;
 }
+
+@media (min-width: 425px) {
+    .navbar__menu ul {
+        width: 100%;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 320px) {
+    .navbar__menu ul {
+        width: 100%;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar__menu ul {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .navbar__menu ul {
+        width: 45%;
+        font-size: 16px;
+    }
+}
+
 
 /* Footer Styles */
 .page__footer {
